@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - [About Me](#about-me)
+- [Education](#education)
 - [Certifications](#certifications)
 - [Projects](#projects)
 - [Technical Skills](#technical-skills)
@@ -9,6 +10,14 @@
 
 ## About me
 I am passionate about information technology and security, with a focus on developing solutions that benefit both organizations and the people they support. I prioritize safeguarding sensitive information and reducing risks by maintaining a robust security posture.
+
+## Education
+- Arizona State University: Fall 2020 – Fall 2022
+  - MS in Information Technology, awarded December 2022
+- California State University, Sacramento: 2015 - 2019
+  - BS in Computer Science, awarded Dececember 2019
+  - Minor in Mathematics 
+
 
 ## Certifications
 ### Completed
