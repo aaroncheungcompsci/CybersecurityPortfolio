@@ -12,7 +12,7 @@ I am passionate about information technology and security, with a focus on devel
 
 ## Certifications
 ### Completed
-- CompTIA Network+ (July 2024)
+- CompTIA Network+ (July 2024) (Verification Code: KBFW4F6REFE4Q93G)
 ### In Progress
 - CompTIA Security+
 - Google Cybersecurity Professional Certificate
