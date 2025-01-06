@@ -31,9 +31,9 @@ Please check out the [Labs](https://github.com/aaroncheungcompsci/cybersecurityp
 
 ## Technical Skills
 - **Programming**: Python, Java, C#
-- **Tools and Platforms**: Kali Linux, Wireshark, Pi-Hole
+- **Tools and Platforms**: Kali Linux, Wireshark, Pi-Hole, Windows, Git, HackerOne
 - **Operating Systems**: Windows, Linux
-- **Networking Basics**: DNS, TCP/IP, Packet Analysis
+- **Networking Basics**: DNS, TCP/IP, Packet Analysis, DHCP, Networking hardware like routers, switches, cabling etc.
 
 ## Contact
 📧 [Email](mailto:aaroncheungcompsci@gmail.com)  
