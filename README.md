@@ -15,7 +15,7 @@ I am passionate about information technology and security, with a focus on devel
 - Arizona State University: Fall 2020 – Fall 2022
   - MS in Information Technology, awarded December 2022
 - California State University, Sacramento: 2015 - 2019
-  - BS in Computer Science, awarded Dececember 2019
+  - BS in Computer Science, awarded December 2019
   - Minor in Mathematics 
 
 
