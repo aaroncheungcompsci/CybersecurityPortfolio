@@ -22,15 +22,17 @@ I am passionate about information technology and security, with a focus on devel
 ## Certifications
 ### Completed
 - CompTIA Network+ (July 2024) (Verification Code: KBFW4F6REFE4Q93G)
+- Google Cybersecurity Professional Certificate (January 2025) ([Verification](https://www.coursera.org/account/accomplishments/specialization/VRCEPL9FJWNF))
+
 ### In Progress
 - CompTIA Security+
-- Google Cybersecurity Professional Certificate
+
 
 ## Projects
 Please check out the [Labs](https://github.com/aaroncheungcompsci/cybersecurityportfolio/tree/main/Labs) folder to see the hands-on work that I have done or plan on doing!
 
 ## Technical Skills
-- **Programming**: Python, Java, C#
+- **Programming**: Python, C#, SQL
 - **Tools and Platforms**: Kali Linux, Wireshark, Pi-Hole, Windows, Git, HackerOne
 - **Operating Systems**: Windows, Linux
 - **Networking Basics**: DNS, TCP/IP, Packet Analysis, DHCP, Networking hardware like routers, switches, cabling etc.
