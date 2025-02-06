@@ -1,9 +1,5 @@
 # Metasploitable Lab
 
-**Author**: Aaron Cheung
-
----
-
 ## Objective
 
 This lab focuses on exploring vulnerabilities in the Metasploitable and TikiWiki systems, utilizing tools such as Nmap, Firefox, and Metasploit to identify, exploit, and document security flaws.
@@ -25,24 +21,20 @@ This lab focuses on exploring vulnerabilities in the Metasploitable and TikiWiki
 
 ### 1. Nmap Scan
 - **Observation**: Detected open port `80/tcp` indicating HTTP is active.
-- **Screenshot**:
   ![Nmap Scan](images/nmap-scan.png)
 
 ### 2. Testing HTTP Access with Firefox
 - **Observation**: Accessed Metasploitable through Firefox using the target IP.
-- **Screenshot**:
   ![Metasploitable in Firefox](images/firefox-access.png)
 
 ### 3. Discovering TikiWiki with DirBuster
 - **Observation**: TikiWiki was discovered during directory brute-forcing.
-- **Screenshot**:
   ![DirBuster](images/dirbuster.png)
 
 ### 4. Exploitation with Metasploit
 - **Process**: 
   - Configured and executed `msfconsole` for exploitation.
   - Navigated to `/tiki-listpages.php` using a supplied link (192.168.58.129/tikiwiki/tiki-listpages.php?offset=0&sort_mode=).
-- **Screenshots**:
   ![Metasploit Exploit](images/msfconsole-exploit.png)
   ![Supplied Link](images/supplied-link.png)
 
