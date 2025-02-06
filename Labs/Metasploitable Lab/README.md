@@ -8,7 +8,7 @@ This lab focuses on exploring vulnerabilities in the Metasploitable and TikiWiki
 
 ## Environment Setup
 
-- **Target IP**: `192.168.58.129` *(Note: This IP was updated due to technical issues and lab restarts)*
+- **Target IP**: `192.168.58.129` (IP address of the Metasploitable VM)
 - **Tools Used**:
   - Nmap
   - Firefox
