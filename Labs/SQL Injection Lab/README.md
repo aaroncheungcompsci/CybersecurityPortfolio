@@ -24,16 +24,17 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
 ### 1. Details of Employee Alice
 - **Process**: Utilize MySQL to show the data on Employee Alice
   ![Alice](images/alice.png)
+  Figure 1: Querying Alice's data in MySQL within the Docker container.
 
 ### 2. Attempt to attack the web application through the login portal
-- **Process**: Injected the string "admin '#" into the username textfield.
+- **Process**: Injected the string `admin '#` into the username textfield.
 - **Observation**: Second image shows a successful injection attack, (unfortunately) returning some data
   ![Attempt](images/sqlinjectionattempt.png)
   ![Success](images/sqlinjectionsuccess.png)
 
 ### 3. Attempt to attack the web application through command line
-- **Process**: Injected the same string [admin '#] into a curl request. 
-- The command used was the following: [curl ’www.seed-server.com/unsafe_home.php?username=admin '&Password=’]
+- **Process**: Injected the same string `admin '#` into a curl request. 
+- The command used was the following: `curl ’www.seed-server.com/unsafe_home.php?username=admin '&Password=’`
 - **Observation**: The command line spits out a (not so pretty) output of the table seen in the previous screenshot.
   ![Curl Attempt](images/curl.png)
 
@@ -43,7 +44,7 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
 ### 5. Attempt to attack the web application using an UPDATE statement
 - **Process**: Change Alice's salary to $30,000, up from $20,000.
 - **Observation**: The comparison between the second and third screenshots show the appropriate change in salary value.
-  - The attack string is as follows: [Alice', salary=30000 #]
+  - The attack string is as follows: `Alice', salary=30000 #`.
   - It is worth noting that the start of the string is not necessary, and only the substring starting from the single quote onwards is fine (and preferred). This is because everyone's nickname at the very start of the lab is empty, and putting something there will change the nickname as well as, in this case, the salary. Wouldn't want to make an injection attack obvious, would we?
   ![Change Alice Salary](images/alicesalaryattack.png)
   ![Before Attack](images/beforeupdatealice.png)
@@ -51,7 +52,7 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
 
 ### 6. Attempt to attack the web application using an UPDATE statement (Part 2)
 - **Process**: Update Boby's salary to $1, down from $30,000 (because Alice happens to be disgruntled from how her boss was acting towards her that one day or something).
-- **Observation**: Utilizing the following attack string, the attack was successful: [', salary=1 where name='Boby'; #]
+- **Observation**: Utilizing the following attack string, the attack was successful: `', salary=1 where name='Boby'; #`
   - We can see the difference in salary taking place here, looking back at the second screenshot of section 2, where we successfully performed an SQL injection attack for the first time.
   ![Before Attacking Boby](images/beforeattackboby.png)
   ![After Attacking Boby](images/afterattackboby.png)
@@ -59,6 +60,7 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
 ### 7. Changing Boby's Password
 - **Process**: Update Boby's password to something we know to wreak even more havoc/chaos/whatever, because Alice is still disgruntled for some reason.
 - **Observation**: The lab instructions say that the password hashing algorithm is SHA1. Knowing this, we can set Boby's password to anything we want, provided that we change the hashed password into a different hashed password that we know. In this case, we're going to change Boby's password to "badpassword".
+- The attack string used for this step was the following: `', password='8a29aaf5687129c1d27b90578fc33ecc49d069dc' where name='Boby'; #`
   ![Hashing](images/sha1sum.png)
   ![Change Boby's Password](images/changebobypassword.png)
   ![Login Screen Boby](images/bobybadpassword.png)
