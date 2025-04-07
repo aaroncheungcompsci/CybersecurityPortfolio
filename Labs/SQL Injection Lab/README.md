@@ -15,7 +15,7 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
   - Docker
   - MySQL
   - Oracle VM Virtualbox
-  - SEEDLabs VM provided by SEEDLabs, provided [here](https://seedsecuritylabs.org/labsetup.html).
+  - SEEDLabs VM provided by SEEDLabs, located [here](https://seedsecuritylabs.org/labsetup.html).
 
 ---
 
@@ -30,7 +30,7 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
   </p>
 
 ### 2. Attempt to attack the web application through the login portal
-- **Process**: Injected the string `admin '#` into the username textfield.
+- **Process**: Injected the string `admin' #` into the username textfield.
 - **Observation**: Second image shows a successful injection attack, (unfortunately) returning some data
   <p align="center">
     <img src="images/sqlinjectionattempt.png" alt="Attempt"/>
@@ -45,9 +45,9 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
   </p>    
 
 ### 3. Attempt to attack the web application through command line
-- **Process**: Injected the same string `admin '#` into a curl request. 
+- **Process**: Injected the same string `admin' #` into a curl request. 
 - The command used was the following: `curl ’www.seed-server.com/unsafe_home.php?username=admin '&Password=’`
-- **Observation**: The command line spits out a (not so pretty) output of the table seen in the previous screenshot.
+- **Observation**: The command line spits out a (not so pretty) output of the table seen in Figure 4.
   <p align="center">
     <img src="images/curl.png" alt="Curl"/>
     <br/>
@@ -59,7 +59,7 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
 
 ### 5. Attempt to attack the web application using an UPDATE statement
 - **Process**: Change Alice's salary to $30,000, up from $20,000.
-- **Observation**: The comparison between the second and third screenshots show the appropriate change in salary value.
+- **Observation**: The comparison between Figures 6 and 7 show the appropriate change in salary value.
   - The attack string is as follows: `Alice', salary=30000 #`.
   - It is worth noting that the start of the string is not necessary, and only the substring starting from the single quote onwards is fine (and preferred). This is because everyone's nickname at the very start of the lab is empty, and putting something there will change the nickname as well as, in this case, the salary. Wouldn't want to make an injection attack obvious, would we?
   <p align="center">
@@ -127,7 +127,7 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
 
 ### 8. Countermeasures via. prepared statements and implementation
 - **Process**: Implement a countermeasure to SQL injection attacks to prevent future injection attacks from taking place. We don't want disgruntled employees changing the database as they please anymore...
-- **Observation**: Changing some code around and taking after their provided example, I implemented the following prepared statement in PHP. Rebuilding Docker was necessary to see any changes take place. Screenshots 2 and 3 show a successful SQL injection attack prior to the implementation, and the last screenshot shows an unsuccessful SQL injection attack after the change. However, it would probably be wise to implement a way to prevent the attacker from logging in at all...
+- **Observation**: Changing some code around and taking after their provided example, I implemented the following prepared statement in PHP. Rebuilding Docker was necessary to see any changes take place. Figures 15 and 16 show a successful SQL injection attack prior to the implementation, and Figure 17 shows an unsuccessful SQL injection attack after the change. However, it would probably be wise to implement a way to prevent the attacker from logging in at all...
   <p align="center">
     <img src="images/fixunsafe.png" alt="Implementing Prepared Statement"/>
     <br/>
@@ -165,5 +165,5 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
 
 ## Additional Notes
 
-- The lab steps follow the structure presented in the [SEEDLabs SQL Injection PDF](https://seedsecuritylabs.org/Labs_20.04/Files/Web_SQL_Injection/Web_SQL_Injection.pdf).
+- The lab steps follow the structure presented in the [SEEDLabs SQL Injection PDF](https://seedsecuritylabs.org/Labs_20.04/Files/Web_SQL_Injection/Web_SQL_Injection.pdf). This is also included in this directory
 - This lab was recreated from the original assignment included in this directory.
