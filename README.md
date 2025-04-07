@@ -40,7 +40,7 @@ Please check out the [Labs](https://github.com/aaroncheungcompsci/cybersecurityp
 - **Tools and Platforms**: Kali Linux, Wireshark, Pi-Hole, Windows, Git, HackerOne, TryHackMe, HackTheBox
 - **Operating Systems**: Windows, Linux
 - **Networking Basics**: DNS, TCP/IP, Packet Analysis, DHCP, Networking hardware like routers, switches, cabling etc.
-- **Cybersecurity Basics**: Log analysis, Threat analysis, Risk Assessment, Social Engineering & Phishing Awareness, OWASP Top 10
+- **Cybersecurity Basics**: Log analysis, Threat analysis, Risk Assessment, Social Engineering & Phishing Awareness, OWASP Top 10, Incident Response procedures
 
 
 ## Contact
