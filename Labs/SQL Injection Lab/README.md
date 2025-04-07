@@ -165,5 +165,5 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
 
 ## Additional Notes
 
-- The lab steps follow the structure presented in the [SEEDLabs SQL Injection PDF](https://seedsecuritylabs.org/Labs_20.04/Files/Web_SQL_Injection/Web_SQL_Injection.pdf). This is also included in this directory
+- The lab steps follow the structure presented in the [SEEDLabs SQL Injection PDF](https://seedsecuritylabs.org/Labs_20.04/Files/Web_SQL_Injection/Web_SQL_Injection.pdf). This is also included in this directory.
 - This lab was recreated from the original assignment included in this directory.
