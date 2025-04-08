@@ -156,11 +156,17 @@ This lab is designed to exploit SQL injection vulnerabilities in a web applicati
 
 ## Key Takeaways
 
-- SQL injection remains one of the most critical vulnerabilities in web applications.
-- **Exploitation**: SQL injection allows attackers to bypass authentication and extract sensitive data, often without detection.
-- **Mitigation**: The implementation of prepared statements (and strong input validation + potentially a way for attackers to not get unauthorized access) significantly reduces the risk of SQL injection attacks.
-- This lab emphasized the importance of secure coding practices and regular security assessments.
+- **Critical Nature of SQL Injection**: SQL injection remains one of the most critical vulnerabilities in web applications, often serving as an entry point for attackers. This lab highlighted how easily an attacker can manipulate SQL queries to bypass authentication mechanisms, demonstrating why SQL injection continues to be a top threat in web security.
 
+- **Exploitation via SQL Injection**: Through this lab, I learned how SQL injection allows attackers to manipulate backend databases by injecting malicious SQL statements. This can be used to bypass authentication, retrieve sensitive data, modify records, or even escalate privileges. The lab showed how such attacks can go undetected for long periods, as they exploit weaknesses in user input validation and query construction.
+
+- **Mitigation through Prepared Statements**: The lab reinforced the importance of secure coding practices, particularly the use of prepared statements with parameterized queries. This technique prevents SQL injection by ensuring user inputs are treated as data, not executable code. This mitigation technique, along with strong input validation (e.g., filtering or sanitizing input), is a fundamental defense against SQL injection vulnerabilities.
+
+- **Real-World Application of Defense Strategies**: By applying these mitigation strategies, I realized that proactive security measures are necessary in the development lifecycle. In addition to prepared statements, tools such as Web Application Firewalls (WAFs) and regular security assessments should be incorporated to protect against SQL injection attacks. The lab emphasized that even small oversights in handling user input can lead to significant vulnerabilities.
+
+- **Exploiting Legacy Applications**: The lab also demonstrated how legacy applications that do not implement these secure coding practices are especially vulnerable to SQL injection. Many older web applications fail to sanitize user inputs properly, making them easy targets for SQL injection attacks. Understanding this reinforces the need for regular security assessments and updates to prevent exploitation of outdated systems.
+
+- **Learning the Persistence of SQL Injection Attacks**: I also learned that SQL injection attacks are persistent and can lead to ongoing issues, as attackers can maintain unauthorized access or persistently exploit databases if proper countermeasures are not implemented. This highlights the importance of constant vigilance in web application security, even after initial exploits have been mitigated.
 ---
 
 ## Additional Notes
