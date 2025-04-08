@@ -112,7 +112,7 @@ This lab focuses on exploring vulnerabilities in the Metasploitable and TikiWiki
     <em>Figure 10: Note the red box. $ip is where our IP address goes, and the port we listen on can be anything as long as it is not currently in use. Port 4321 in this case is nice, sweet, and simple.</em>
   </p>
 
-- **Observation**: After configuring the `reverseshell.php` file correctly, we need a place to upload this file so we can execute it. Luckily, TikiWiki has a page called `backups` that we can use to our advantage. As Figure 11 shows, we execute this reverse shell by utilizing the following URL: `<our IP Address>/tikiwiki/backups/reverseshell.php` (if you are following along and happen to name the shell file as something else, replace `reverseshell` with whatever you named the file).
+- **Observation**: After configuring the `reverseshell.php` file correctly, we need a place to upload this file so we can execute it. Luckily, TikiWiki has a page called `backups` that we can use to our advantage. As Figure 11 shows, we execute this reverse shell by utilizing the following URL: `<host IP Address>/tikiwiki/backups/reverseshell.php` (if you are following along and happen to name the shell file as something else, replace `reverseshell` with whatever you named the file).
 
   <p align="center">
     <img src="images/reverse-shell-in-action.png" alt="Reverse Shell Action"/>
