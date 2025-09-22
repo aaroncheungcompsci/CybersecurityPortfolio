@@ -10,6 +10,7 @@ If you would like to see a more indepth description of each lab, you can navigat
     - Heartbleed
 - Web Security
     - XSS (Cross Site Scripting)
+- Various Cisco Packet Tracer Labs
 
 ## Resources
 If you would like to know where I am finding (some) of these labs, please visit the following page(s):
