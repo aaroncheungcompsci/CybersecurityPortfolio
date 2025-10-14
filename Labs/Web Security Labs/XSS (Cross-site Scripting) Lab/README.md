@@ -116,12 +116,18 @@ This lab demonstrates Cross‑Site Scripting (XSS) vulnerabilities by using a de
     <img src="images/alice_profile.png" alt="alice_profile"/>
     <br/>
     <em>Figure 11: Alice's profile before being infected by Samy's script in Figure 10.</em>
-  </p>    
+  </p>
+
+  <p align="center">
+    <img src="images/alice_during_samy.png" alt="alice_visit_samy"/>
+    <br/>
+    <em>Figure 12: Upon visiting Samy's profile, we can confirm that the script executed properly (it's not actually a self-propagating worm yet).</em>
+  </p>       
 
   <p align="center">
     <img src="images/alice_infected.png" alt="After Attack"/>
     <br/>
-    <em>Figure 12: Alice's profile after visiting Samy's profile. The brief description of Alice's profile was modified, indicating that the script works.</em>
+    <em>Figure 13: Alice's profile after visiting Samy's profile. The brief description of Alice's profile was modified, indicating that the script works.</em>
   </p>    
 
 ### 6. Writing a Self-Propagating XSS Worm
@@ -131,25 +137,25 @@ This lab demonstrates Cross‑Site Scripting (XSS) vulnerabilities by using a de
   <p align="center">
     <img src="images/alice_before_samy.png" alt="alice_before_samy"/>
     <br/>
-    <em>Figure 13: This is Alice's profile, just as how we left it in Figure 12 except for the fact that I moved the "You were infected!" message to the "About me" section. This was where I tested changing <code>&briefdescription</code> to just <code>&description</code> in the script earlier.</em>
+    <em>Figure 14: This is Alice's profile, just as how we left it in Figure 12 except for the fact that I moved the "You were infected!" message to the "About me" section. This was where I tested changing <code>&briefdescription</code> to just <code>&description</code> in the script earlier.</em>
   </p>    
 
   <p align="center">
     <img src="images/alice_during_samy.png" alt="alice_during_samy"/>
     <br/>
-    <em>Figure 14: Upon inspecting element and navigating to the console, we can see a confirmation of the script working via the output.</em>
+    <em>Figure 15: Upon inspecting element and navigating to the console, we can see a confirmation of the script working via the output.</em>
   </p>
 
   <p align="center">
     <img src="images/alice_after_samy.png" alt="alice_after_samy"/>
     <br/>
-    <em>Figure 15: Upon returning to Alice's profile, the message "You were infected!" is gone. This confirms that the script definitely did something.</em>
+    <em>Figure 16: Upon returning to Alice's profile, the message "You were infected!" is gone. This confirms that the script definitely did something.</em>
   </p>
 
   <p align="center">
     <img src="images/worm_in_alice.png" alt="worm_in_alice"/>
     <br/>
-    <em>Figure 16: This is the script that transferred itself into Alice's profile, censored for safety reasons. This was done by simply replacing the "You were infected!" string with the actual self-propagating mechanism scribbled in red.</em>
+    <em>Figure 17: This is the script that transferred itself into Alice's profile, censored for safety reasons. This was done by simply replacing the "You were infected!" string with the actual self-propagating mechanism scribbled in red.</em>
   </p> 
 
 - **Observation**: So we know that Samy's script worked on Alice when she visited his profile. Do we know if it can self-propagate if a different user visits Alice's profile instead of Samy's? Let's see how Boby handles this.
@@ -157,25 +163,25 @@ This lab demonstrates Cross‑Site Scripting (XSS) vulnerabilities by using a de
   <p align="center">
     <img src="images/boby_before_alice.png" alt="boby_before_alice"/>
     <br/>
-    <em>Figure 17: This is Boby's profile before he visits Alice's infected profile. It's currently clean and uninfected.</em>
+    <em>Figure 18: This is Boby's profile before he visits Alice's infected profile. It's currently clean and uninfected.</em>
   </p> 
 
   <p align="center">
     <img src="images/boby_during_alice.png" alt="boby_during_alice"/>
     <br/>
-    <em>Figure 18: Checking the console, we can see that we get confirmation that the script works once again, only that we're visiting Alice's profile instead of Samy's profile this time.</em>
+    <em>Figure 19: Checking the console, we can see that we get confirmation that the script works once again, only that we're visiting Alice's profile instead of Samy's profile this time.</em>
   </p> 
 
   <p align="center">
     <img src="images/boby_after_alice.png" alt="boby_after_alice"/>
     <br/>
-    <em>Figure 19: As expected, Boby's profile how shows an empty "About me" section, indicating that the script has done something.</em>
+    <em>Figure 20: As expected, Boby's profile how shows an empty "About me" section, indicating that the script has done something.</em>
   </p> 
 
   <p align="center">
     <img src="images/boby_edit_profile_after_alice.png" alt="boby_edit_profile"/>
     <br/>
-    <em>Figure 20: Boby's profile infected with the worm that cloned itself from Alice. The script is censored for safety reasons.</em>
+    <em>Figure 21: Boby's profile infected with the worm that cloned itself from Alice. The script is censored for safety reasons.</em>
   </p> 
 
 ### 7. Defeating XSS Attacks Using CSP (Countermeasure)
@@ -186,25 +192,25 @@ This lab demonstrates Cross‑Site Scripting (XSS) vulnerabilities by using a de
   <p align="center">
     <img src="images/example32a.png" alt="32a"/>
     <br/>
-    <em>Figure 21: The first website, example32a. The "OK"s mean that the JavaScript code associated with that numbered line is executing successfully.</em>
+    <em>Figure 22: The first website, example32a. The "OK"s mean that the JavaScript code associated with that numbered line is executing successfully.</em>
   </p>      
 
   <p align="center">
     <img src="images/32a_button_click.png" alt="32a_button"/>
     <br/>
-    <em>Figure 22: This is what happens when we click the button on example32a. The same will happen for example60 and example70, although those won't be shown.</em>
+    <em>Figure 23: This is what happens when we click the button on example32a. The same will happen for example60 and example70, although those won't be shown.</em>
   </p>      
   
   <p align="center">
     <img src="images/pre_example32b.png" alt="pre_example32b"/>
     <br/>
-    <em>Figure 23: The second website, example32b. Notice that there are now some lines that say "Failed". This is because of CSP being implemented for some of them, specifically where they are failing. This can also be observed in the following websites. The button does not do anything.</em>
+    <em>Figure 24: The second website, example32b. Notice that there are now some lines that say "Failed". This is because of CSP being implemented for some of them, specifically where they are failing. This can also be observed in the following websites. The button does not do anything.</em>
   </p>    
 
   <p align="center">
     <img src="images/pre_example32c.png" alt="pre_example32c"/>
     <br/>
-    <em>Figure 24: The third website, example23c. The first line is marked "OK", unlike with example32b.</em>
+    <em>Figure 25: The third website, example23c. The first line is marked "OK", unlike with example32b.</em>
   </p>
 
 - **Observation**: The lab asks us to modify both the .php and the apache.config files to implement CSP appropriately. Let's do that now.
@@ -212,25 +218,25 @@ This lab demonstrates Cross‑Site Scripting (XSS) vulnerabilities by using a de
   <p align="center">
     <img src="images/editing_apache_config.png" alt="apache_config"/>
     <br/>
-    <em>Figure 25: The apache.config file. The lab wants us to modify this file in a way where example32b displays "OK" for both example60 and example70. The example70.com line was already marked as "OK", so that just leaves example60 to be changed. Here, we simply add that to where it defines CSP for example32b. Originally, only example70 was listed, but we added example60 alongside it.</em>
+    <em>Figure 26: The apache.config file. The lab wants us to modify this file in a way where example32b displays "OK" for both example60 and example70. The example70.com line was already marked as "OK", so that just leaves example60 to be changed. Here, we simply add that to where it defines CSP for example32b. Originally, only example70 was listed, but we added example60 alongside it.</em>
   </p>
 
   <p align="center">
     <img src="images/post_example32b.png" alt="post_example32b"/>
     <br/>
-    <em>Figure 26: Lines 5 and 6 now say "OK", signifying that the JavaScript code can now execute for those tests.</em>
+    <em>Figure 27: Lines 5 and 6 now say "OK", signifying that the JavaScript code can now execute for those tests.</em>
   </p>    
   
   <p align="center">
     <img src="images/editing_php_code.png" alt="php_code"/>
     <br/>
-    <em>Figure 27: The phpindex.php file containing the CSP definition. The lab wants us to have everything but line 3 to say "OK". We added the line inbetween 4 and 5 to make that happen.</em>
+    <em>Figure 28: The phpindex.php file containing the CSP definition. The lab wants us to have everything but line 3 to say "OK". We added the line inbetween 4 and 5 to make that happen.</em>
   </p>  
 
   <p align="center">
     <img src="images/post_example32c.png" alt="post_example32c"/>
     <br/>
-    <em>Figure 28: All lines but number 3 now say "OK", signifying that the JavaScript code can now execute for those tests.</em>
+    <em>Figure 29: All lines but number 3 now say "OK", signifying that the JavaScript code can now execute for those tests.</em>
   </p>      
     
 ---
