@@ -1,0 +1,14 @@
+From: rnastercardITsupport@rnastercard.com
+To: john.doe@mastercard.com
+Subject: Account Verification Required
+
+Body:
+
+Hello John,
+
+Your employee email account has been marked for deactivation and needs to be verified. Failure to verify within 24 hours will result in the suspension of your email account.
+
+[Click here](https://en.wikipedia.org/wiki/Phishing) to log into your employee email to verify your identity.
+
+Regards,
+Mastercard Support Team
