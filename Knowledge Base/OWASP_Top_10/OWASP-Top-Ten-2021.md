@@ -1,7 +1,7 @@
 # OWASP Top 10
 
 ## Objective
-Document thorough and practical understanding of the OWASP Top 10 in terms of what it is and its purpose. This file will be manually updated when the OWASP top 10 gets updated to incentivse keeping up with cybersecurity trends.
+Document thorough and practical understanding of the OWASP Top 10 in terms of what it is and its purpose. This file will be kept in an archive when the OWASP top 10 gets updated to incentivse keeping up with cybersecurity trends, and to preserve the work that I have done to understand it.
 
 ### What is it?
 OWASP top 10 is a list detailing the top 10 security risks in web applications.
