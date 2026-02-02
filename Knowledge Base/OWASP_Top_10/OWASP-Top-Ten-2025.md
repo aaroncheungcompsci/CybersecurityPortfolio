@@ -15,6 +15,11 @@ OWASP top 10 is updated approximately every 4 years. The next update should be i
 ## The list (updated as of end of 2025)
 
 1) A01:2025 - Broken Access Control
+    - Access control is defined as something that enforces policy such that users cannot act outside of their intended permissions. When access control is broken, it typically leads to unintended and often dangerous activities such as unauthorized access to information or the modification or destruction of data.
+    - A few common examples include:
+        - Changing values in a URL to access resources a user should not be allowed to see.
+        - A user with normal privileges can access admin functions because the application didn't properly enforce permission checks.
+        - A normal user can access admin-only features simply by knowing the right link.
 2) A02:2025 - Security Misconfiguration
 3) A03:2025 - Software Supply Chain Failures
 4) A04:2025 - Cryptographic Failures
