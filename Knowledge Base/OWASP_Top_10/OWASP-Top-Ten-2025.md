@@ -20,6 +20,11 @@ OWASP top 10 is updated approximately every 4 years. The next update should be i
         - Changing values in a URL to access resources a user should not be allowed to see.
         - A user with normal privileges can access admin functions because the application didn't properly enforce permission checks.
         - A normal user can access admin-only features simply by knowing the right link.
+    - Some preventative measures include:
+        - Deny by default.
+        - Implement access control once and reuse it throughout the application.
+            - Implementing access control ore than once is the equivalent of building multiple doors into the same building.
+        - Implement rate limits on API/controller access to protect against automated attack tools.
 2) A02:2025 - Security Misconfiguration
 3) A03:2025 - Software Supply Chain Failures
 4) A04:2025 - Cryptographic Failures
