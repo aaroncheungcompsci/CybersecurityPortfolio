@@ -26,6 +26,15 @@ OWASP top 10 is updated approximately every 4 years. The next update should be i
             - Implementing access control ore than once is the equivalent of building multiple doors into the same building.
         - Implement rate limits on API/controller access to protect against automated attack tools.
 2) A02:2025 - Security Misconfiguration
+    - This is defined as a system, application, or cloud service that is set up incorrectly in terms of security, potentially creating vulnerabilities.
+    - Some misconfigurations may include:
+        - Default accounts and passwords being enabled and unchanged.
+        - Unnecessary features/privileges are enabled/installed.
+        - Missing appropriate security hardening practices across an application/cloud service.
+    - Some preventative measures include:
+        - Don't use default accounts/passwords, change them accordingly otherwise if possible.
+        - Be sure to disable unnecessary features/privileges
+        - Reinforce security hardening procedures/measures to minimize attack vectors that are potentially available.
 3) A03:2025 - Software Supply Chain Failures
 4) A04:2025 - Cryptographic Failures
 5) A05:2025 - Injection
