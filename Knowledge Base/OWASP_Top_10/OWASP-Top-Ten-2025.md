@@ -36,6 +36,17 @@ OWASP top 10 is updated approximately every 4 years. The next update should be i
         - Be sure to disable unnecessary features/privileges
         - Reinforce security hardening procedures/measures to minimize attack vectors that are potentially available.
 3) A03:2025 - Software Supply Chain Failures
+    - Software supply chain failures are breakdowns (or other compromises) in the process of building, distributing, or updating software.
+        - Most commonly caused by vulnerabilities or malicious changes in external code, tools, or dependencies that the software system relies on.
+    - The system is potentially vulnerable if/when:
+        - The versions of all components used in the system aren't tracked appropriately.
+            - Can include being out of date or deprecated.
+        - Systems aren't scanned routinely.
+        - Security hardening isn't implemented on every single part of the supply chain, with special focus on access control and the concept of least privilege.
+    - Preventative measures include:
+        - Reducing attack surface by removing unnecessary components, features, dependencies, etc.
+        - Continuously monitor sources like CVEs (Common Vulnerabilities and Exposures), NVD (National Vulnerability Database), and OSV (Open Source Vulnerabilities).
+        - Only obtain components/external code from official (trusted) sources over secure links.
 4) A04:2025 - Cryptographic Failures
 5) A05:2025 - Injection
 6) A06:2025 - Insecure Design
