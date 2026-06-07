@@ -5,12 +5,10 @@ This folder contains documentation of my practical/hands-on experience in cybers
 If you would like to see a more indepth description of each lab, you can navigate into any folder of your choosing to see them.  My (updated) runthrough of the labs will most likely be a README.md file to easily read the contents of my findings. 
 
 ## Labs in Progress
-- Network Security
-    - Firewall Exploration
-    - Heartbleed
 - Web Security
-    - XSS (Cross Site Scripting)
+    - XSS (Will redo this later)
 - Various Cisco Packet Tracer Labs
+- Wazuh Lab
 
 ## Resources
 If you would like to know where I am finding (some) of these labs, please visit the following page(s):
