@@ -16,6 +16,3 @@ If you would like to see a more indepth description of each lab, you can navigat
 If you would like to know where I am finding (some) of these labs, please visit the following page(s):
 
 - [SEEDLabs](https://seedsecuritylabs.org/labs.html) (mainly using 2.0, but some may be from 1.0)
-
-## TryHackMe Badge
-![TryHackMe Badge](https://tryhackme-badges.s3.amazonaws.com/acheungcompsci.png)
