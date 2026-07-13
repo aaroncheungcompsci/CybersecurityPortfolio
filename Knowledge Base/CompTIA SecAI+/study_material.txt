@@ -1,0 +1,15 @@
+Important Acronyms
+=================
+RAG - Retrieval-Augmented Generation
+GAN - Generative Adversarial Network
+LLM - Large Language Model
+SLM - Small Language Model
+ATLAS - Artificial Threat Landscape for AI Systems
+
+Important Topics
+=================
+OWASP Top 10 for LLMs
+OWASP Top 10 for ML Security
+MIT AI Risk Repository
+MITRE ATLAS
+CVE AI Working Group
