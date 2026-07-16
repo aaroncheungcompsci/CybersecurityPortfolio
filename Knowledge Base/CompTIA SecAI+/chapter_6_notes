@@ -1,0 +1,27 @@
+Access controls for AI Systems
+===============================
+Model Access - Who gets to interact with the AI model?
+    Inference Access - Querying a model and receiving a response
+    Training/Fine-tuning Access - Permits direct alteration of a model's weights
+    Configuration Access - Covers the ability to modify a model's operational parameters w/o retraining
+
+Data Access - Who can interact with information flowing in and out of an AI system?
+    Training Data Access - the backbone of any model.
+        - Least privelege is important!
+    Inference Data Access - User permissions must be used to filter accessibility before query is processed
+    Output Data Access - Who can view what the model produces?
+        - Log access should be tiered based on sensitivity of data
+    Vector Store and Embeddings Access
+        - Vector store is numerical representation (embeddings) of knowledge base documents
+            - Access to this is pretty much the same as access to underlying documents
+        - Access to the vector store should mirror the privileges granted to the underlying documents
+
+Agent Access - An agent is an entity that executes actions on behalf of a user or organization
+    - What is the agent allowed to access?
+    Agent Identity and Delegation - Identity of an agent is not as simple as an identity of a human
+    - Safest approach is to have the same permissions as the user it represents, but is restrictive
+        - More flexibility means more risk
+    Scope Limitations - boundaries for permissible agent behavior
+        - Action scoping - confines agent to explicit set of operations
+        - Resource scoping - dictates which systems, datasets, and APIs the agent may interact with
+        - Conditional scoping - allows agent to do certain things when certain conditions are met
